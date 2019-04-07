@@ -16,10 +16,12 @@ public class MainGame : MonoBehaviour {
 		if (Player == null) {
 			Debug.LogError("Player was not set!  Attach a Player in the Main.scene!");
 		}
+        
 		if (MainCamera == null) {
 			Debug.LogError("Main Camera is not set.  Attach a Camera in the Main.scene!");
 		}
 		cameraOffset = MainCamera.transform.position - Player.transform.position;
+        
 	}
 
 	 //Update is called once per frame; good for input
@@ -67,9 +69,11 @@ public class MainGame : MonoBehaviour {
 	}
 
     //Reposition camera will follow the object in the x and z direction
-	protected void RepositionCamera() {
+    
+    protected void RepositionCamera() {
 		MainCamera.transform.position = new Vector3(Player.transform.position.x + cameraOffset.x, 
 			cameraOffset.y, 
 			Player.transform.position.z + cameraOffset.z);
 	}
+    
 }

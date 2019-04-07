@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 
 	protected float speed = 6f;
 	protected Vector3 movementDirection;
+  
+
 		
 	public void Move(float x, float z) {
 		movementDirection.Set(x * speed, 0f, z * speed);
@@ -24,4 +26,10 @@ public class Player : MonoBehaviour {
 			Rigidbody.AddForce (gameObject.transform.up * 5f, ForceMode.Impulse);
 		}
 	}
+
+    public void Look(float x, float z)
+    {
+
+    }
+
 }

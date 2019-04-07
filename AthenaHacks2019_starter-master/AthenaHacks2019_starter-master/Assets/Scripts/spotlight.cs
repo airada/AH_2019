@@ -46,6 +46,5 @@ public class spotlight : MonoBehaviour
 
         Debug.DrawRay(transform.position, mPoint, Color.blue);
         transform.rotation = Quaternion.LookRotation(mPoint);
-
     }
 }
